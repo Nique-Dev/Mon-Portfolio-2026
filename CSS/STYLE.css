@@ -1,6 +1,6 @@
 :root{
-    --violet-doux : #6c63ff;
-    --violet-fonce : #534EDD;
+    --violet-doux : #39049b;
+    --violet-fonce : #2f0380;
     --Orange-vif : #ffa726;
     --gris-tres-fonce : #333;
     --gris-fonce : #666;
@@ -152,4 +152,61 @@ section h2::after{
     margin-bottom: 2rem;
     color: var(--gris-fonce);
     font-size: 1.3rem;
+}
+.competences table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.competences table{
+    margin-bottom: 50px;
+}
+.competences table th, .competences table td{
+    padding: 15px;
+    text-align: left;
+    
+    font-size: 1.4rem; 
+}
+.competences table th{
+    background-color: var(--violet-doux);
+    color: white;
+    text-transform: uppercase;
+}
+.competences table tbody td{
+    border-bottom: 1px solid var(--gris-clair);
+}
+.competences table tbody tr:nth-child(even){
+    background-color: #fdfdfd;
+}
+.competences table tbody tr:hover{
+    background-color: #f0f0f0;
+}
+.competences table tbody tr{
+    transition: background-color 0.3s ease;
+}
+.foot{
+    background-color: var(--violet-doux);
+    padding: 3rem ;
+    text-align: center;
+    font-size: 2.2rem;
+    
+}
+footer p{
+    color: white;
+
+}
+footer a{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+footer a:hover{
+    color: var(--Orange-vif)
+    transform: translateY(-3px);
 }
