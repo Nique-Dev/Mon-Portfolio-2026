@@ -8,12 +8,14 @@
     --gris-clair : #eee;
     
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
+    
     background-color: var(--gris-clair);
     font-family: Roboto, sans-serif;
     line-height: 1.6;
@@ -209,4 +211,185 @@ footer a{
 footer a:hover{
     color: var(--Orange-vif)
     transform: translateY(-3px);
+}
+
+/* =========================================
+   NOUVEAU STYLE PAGE CONTACT (A REMPLACER)
+   ========================================= */
+
+.contact-hero {
+    min-height: calc(100vh - 200px); /* Hauteur moins header/footer pour centrer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.contact-card {
+    background: #fff;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* --- Côté Gauche (Infos) --- */
+.card-left {
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-left h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.card-left h2::after { margin: 1.2rem 0; background-color: rgba(255,255,255,0.5); } /* Soulignement blanc */
+
+.card-left p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 3rem;
+}
+
+.info-list { margin-bottom: 3rem; }
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--Orange-vif);
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-item h4 { font-size: 1.2rem; color: #fff; }
+.info-item p { margin: 0; font-size: 1.1rem; color: rgba(255,255,255,0.7); }
+
+.direct-apps { display: flex; gap: 1rem; margin-top: auto; }
+
+.app-btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.app-btn.wa { background-color: #25D366; }
+.app-btn.tg { background-color: #0088CC; }
+
+.app-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    opacity: 0.9;
+    color: white;
+}
+
+/* --- Côté Droit (Formulaire) --- */
+.card-right {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-right h3 {
+    font-size: 2rem;
+    color: var(--violet-doux);
+    margin-bottom: 3rem;
+}
+
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Groupe d'input animé (floating labels) */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 0 10px;
+    border: none;
+    border-bottom: 2px solid var(--gris-clair);
+    background: transparent;
+    outline: none;
+    font-size: 1.1rem;
+    color: var(--gris-tres-fonce);
+    transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Animation au focus */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: var(--violet-fonce);
+    font-weight: bold;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--violet-doux);
+}
+
+.btn-fancy {
+    background-color: var(--violet-fonce);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(47, 3, 128, 0.2);
+}
+
+.btn-fancy:hover {
+    background-color: var(--violet-doux);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(47, 3, 128, 0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .contact-card { grid-template-columns: 1fr; }
+    .card-left, .card-right { padding: 3rem; }
+    .card-left h2 { font-size: 2.2rem; }
 }
