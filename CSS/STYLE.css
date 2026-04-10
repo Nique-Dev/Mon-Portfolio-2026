@@ -212,7 +212,6 @@ footer a:hover{
     color: var(--Orange-vif)
     transform: translateY(-3px);
 }
-
 /* =========================================
    NOUVEAU STYLE PAGE CONTACT (A REMPLACER)
    ========================================= */
@@ -392,4 +391,214 @@ footer a:hover{
     .contact-card { grid-template-columns: 1fr; }
     .card-left, .card-right { padding: 3rem; }
     .card-left h2 { font-size: 2.2rem; }
+}
+
+/* =========================================
+   STYLE PAGE DIVERTISSEMENT
+   ========================================= */
+
+/* Centrage du titre principal */
+.realisation {
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto 20px auto;
+    text-align: center;
+}
+
+.realisation h2 {
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Grille de cartes adaptée pour 4 éléments */
+.cards {
+    display: grid;
+    /* auto-fit permet de passer de 2 à 4 colonnes selon la taille de l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 80px auto;
+}
+
+/* Style de la carte */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de la carte */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--violet-doux);
+}
+
+/* Corps de la carte */
+.card-body {
+    padding: 20px;
+    flex-grow: 1; /* Permet d'aligner le footer en bas même si le texte est court */
+}
+
+.card-body h3 {
+    margin-bottom: 12px;
+    color: var(--violet-fonce);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.card-body p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0;} /* Reset du padding pour
+
+/* =========================================
+   STYLE PAGE PASSIONS
+   ========================================= */
+
+/* En-tête de section */
+.realisation {
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto 10px auto;
+    text-align: center;
+}
+
+.realisation h2 {
+    color: var(--violet-doux);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.realisation p {
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+}
+
+/* Grille de cartes */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 92%;
+    max-width: 1200px;
+    margin: 40px auto 80px auto;
+
+}
+
+/* La Carte */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image avec un bord coloré en bas */
+/* Image avec arrondis supérieurs uniquement pour matcher la maquette */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    /* Arrondit seulement les coins supérieurs (gauche et droite) */
+    border-radius: 15px 15px 0 0; 
+    border-bottom: 5px solid var(--violet-fonce);
+}
+
+/* Contenu de la carte */
+.card-body {
+    padding: 25px 20px;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    color: var(--violet-fonce);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-body p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Tags de catégories */
+.link {
+    padding: 0 20px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.link a {
+    background-color: var(--gris-tres-clair);
+    color: var(--violet-doux);
+    border: 1px solid var(--gris-clair);
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    background-color: var(--violet-doux);
+    color: white;
+}
+
+/* Pied de carte avec bouton WhatsApp unique */
+.card-footer {
+    padding: 20px;
+    border-top: 1px solid var(--gris-clair);
+    display: flex;
+    justify-content: center;
+}
+
+.bouton-whatsapp {
+    text-decoration: none;
+    color: #25D366; /* Couleur WhatsApp */
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.bouton-whatsapp:hover {
+    transform: scale(1.1);
+    color: var(--violet-doux);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .realisation h2 { font-size: 2.2rem; }
+    .cards { grid-template-columns: 1fr; }
 }
